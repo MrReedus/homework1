@@ -18,7 +18,7 @@ interface  user {
     avatar: string,
     name: string
 }
-interface message {
+export interface message {
     text: string
     time: string
 }
@@ -28,18 +28,20 @@ interface MessageType {
     message: message,
 }
 
+
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
     user: {
         avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        name: 'Eugine',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
-        time: '22:00', // можно менять
+        text: 'Hello, how are You Bro? ', // можно менять
+        time: '21:55', // можно менять
     },
 }
+
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
@@ -47,8 +49,8 @@ export const friendMessage0: MessageType = {
         name: 'Sasha', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
-        time: '22:00', // можно менять
+        text: "I'am fine, thank you that asked. :)", // можно менять
+        time: '22:03', // можно менять
     },
 }
 

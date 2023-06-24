@@ -1,5 +1,7 @@
 .message {
     margin-bottom: 55px;
+
+    margin-left: 635px;
 }
 
 .imageAndText {
@@ -36,6 +38,7 @@
 }
 
 .name {
+    text-align: right;
     margin-bottom: 3px;
     font-weight: 600;
     color: #FFFFFF;

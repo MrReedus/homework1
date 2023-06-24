@@ -6,7 +6,8 @@
 }
 
 .hw {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .hwTitle {
