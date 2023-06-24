@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './FriendMessage.module.css'
 import avatar from '../avatar.png'
+import {friendMessage0} from "../HW1";
 
 // создать тип вместо any и отобразить приходящие данные
 const FriendMessage = (props: any) => {
@@ -22,7 +23,7 @@ src={avatar}
                         className={s.friendName}
                     >
                         {/*создаёт студент*/}
-                       Ivan
+                        {friendMessage0.user.name}
                         {/**/}
                     </div>
                     <pre
