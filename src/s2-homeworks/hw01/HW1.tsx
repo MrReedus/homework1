@@ -14,18 +14,30 @@ import avatar from './avatar.png'
 * */
 
 // нужно создать правильный тип вместо any
-interface  user {
-    avatar: string,
-    name: string
-}
-export interface message {
-    text: string
-    time: string
-}
+// interface  user {
+//     avatar: string,
+//     name: string
+// }
+// export interface message {
+//     text: string
+//     time: string
+// }
+// export interface MessageType {
+//     id: number,
+//     user: user,
+//     message: message,
+// }
 export interface MessageType {
-    id: number,
-    user: user,
-    message: message,
+    id: number
+    user: {
+        avatar: string
+        name: string
+    }
+    message: {
+        text: string
+        time: string
+    }
+
 }
 
 
@@ -37,7 +49,7 @@ export const message0: MessageType = {
         name: 'Eugine',  // можно менять
     },
     message: {
-        text: 'Hello, how are You Bro?', // можно менять
+        text: 'some new text', // можно менять
         time: '21:55', // можно менять
     },
 }
