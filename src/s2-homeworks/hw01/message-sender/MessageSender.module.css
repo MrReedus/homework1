@@ -1,5 +1,6 @@
 .sendForm {
     display: flex;
+    margin-bottom: 141x;
 }
 
 .textarea {
@@ -26,6 +27,7 @@
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
+
 .button:hover {
     opacity: 0.8;
 }

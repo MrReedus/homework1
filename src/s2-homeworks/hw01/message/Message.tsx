@@ -4,12 +4,13 @@ import avatar from './../avatar.png'
 import {message0} from "../HW1";
 // нужно создать правильный тип вместо any
 import {message} from "../HW1";
+import {MessageType} from '../HW1'
 
 
 
-
-export type MessagePropsType = any
-
+export type MessagePropsType = {
+    message: MessageType
+}
 
 
 // нужно отобразить приходящие данные
@@ -29,11 +30,11 @@ const Message = (props: MessagePropsType) => {
                         {message0.user.name}
                         {/**/}
                     </div>
-                    <pre id={'hw1-text-' + props.message.id} className={s.messageText}>
+                    <p id={'hw1-text-' + props.message.id} className={s.messageText}>
                         {/*создаёт студент*/}
                         {message0.message.text}
                         {/**/}
-                    </pre>
+                    </p>
                 </div>
             </div>
             <div id={'hw1-time-' + props.message.id} className={s.time}>

@@ -22,7 +22,7 @@ export interface message {
     text: string
     time: string
 }
-interface MessageType {
+export interface MessageType {
     id: number,
     user: user,
     message: message,
@@ -37,7 +37,7 @@ export const message0: MessageType = {
         name: 'Eugine',  // можно менять
     },
     message: {
-        text: 'Hello, how are You Bro? ', // можно менять
+        text: 'Hello, how are You Bro?', // можно менять
         time: '21:55', // можно менять
     },
 }
@@ -49,7 +49,7 @@ export const friendMessage0: MessageType = {
         name: 'Sasha', // можно менять
     },
     message: {
-        text: "I'am fine, thank you that asked. :)", // можно менять
+        text: "I'am fine, thank you that asked.:)", // можно менять
         time: '22:03', // можно менять
     },
 }

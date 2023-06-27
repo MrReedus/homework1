@@ -1,10 +1,13 @@
 import React from 'react'
 import s from './FriendMessage.module.css'
 
-import {friendMessage0} from "../HW1";
-
+import {friendMessage0, MessageType} from "../HW1";
+import { MessagePropsType } from '../message/Message';
 // создать тип вместо any и отобразить приходящие данные
-const FriendMessage = (props: any) => {
+
+
+// interface
+const FriendMessage = (props: MessagePropsType) => {
     return (
         <div
             id={'hw1-friend-message-' + props.message.id}
@@ -26,14 +29,14 @@ const FriendMessage = (props: any) => {
                         {friendMessage0.user.name}
                         {/**/}
                     </div>
-                    <pre
+                    <p
                         id={'hw1-friend-text-' + props.message.id}
                         className={s.friendMessageText}
                     >
                         {/*создаёт студент*/}
                         {friendMessage0.message.text}
                         {/**/}
-                    </pre>
+                    </p>
                 </div>
             </div>
             <div
