@@ -1,16 +1,37 @@
 .button {
+    width: 132px;
+    height: 30px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    outline: none;
+    border: none;
+    cursor:pointer;
+    border-radius: 3px;
+    background: rgba(0, 102, 204, 1);
+
 }
 
 .disabled {
+    opacity: 0.5;
+    background: #004D99;
 }
 
 .secondary {
+    border: 1px solid #06C;
+    background: #FFF;
+    color: #06C;
 }
 
 .default {
+    background: rgba(0, 102, 204, 1);
 }
 
 .red {
+    background: #CC1439;
 }
 
 .default:hover {
