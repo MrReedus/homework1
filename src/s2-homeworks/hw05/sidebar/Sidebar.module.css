@@ -1,27 +1,37 @@
 .sidebar {
-display: none;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 317px;
+    height: 100vh;
+    background-color: #fff;
+    transition: left 0.3s ease;
 }
 
 .sidebar.open {
-    display: block;
-    width: 317px;
-    background-color: #fff;
-    height: 100%;
+    /*display: block;*/
+    /*width: 317px;*/
+    /*background-color: #fff;*/
+    /*height: 100%;*/
     position: absolute;
-    top: 0;
-    left: 0;
+    /*top: 0;*/
+    /*left: 0;*/
     z-index: 2;
+    left: 0px; /* Показываем меню, смещая его влево на 0px */
+    animation: slideInRight 0.3s ease; /* Добавляем анимацию появления */
+
 }
 
 .background {
     opacity: 0.3;
     background: #000;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    animation: overlayOpacity 0.5s ease;
 
 }
 
@@ -29,7 +39,7 @@ display: none;
     display: flex;
     flex-direction: column;
     row-gap: 45px;
-    padding: 63px 109px auto 70px;
+    padding: 63px 109px 0 70px;
 
 }
 
@@ -40,18 +50,48 @@ display: none;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-
     text-decoration: none;
+    cursor: pointer;
+    transition: .2s ease-in;
+
 }
 
 .nav a:hover {
+    color: #58ACFF;
 }
 
 .nav a.active {
+    color: #0059B2;
 }
-.close {
 
+.close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .close img {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-100%); /* Начальное положение за пределами экрана */
+    }
+    100% {
+        transform: translateX(0); /* Конечное положение на экране */
+    }
+}
+
+@keyframes overlayOpacity {
+    0% {
+        opacity: 0; /* Начальное положение за пределами экрана */
+    }
+    100% {
+        opacity: 0.3; /* Конечное положение на экране */
+    }
 }
