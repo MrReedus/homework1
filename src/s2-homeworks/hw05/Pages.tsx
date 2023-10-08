@@ -21,7 +21,7 @@ function Pages() {
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
                 {/*<Route ...*/}
-                <Route path={"/"}></Route>
+                <Route path={"/"} element={<Navigate to={PATH.PRE_JUNIOR} />} />
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}></Route>
                 <Route path={PATH.JUNIOR} element={<Junior/>}></Route>
